@@ -103,7 +103,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010872611432, guid: aeaff9b5ebec46c43a82150a8dbd1ea0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.7120957
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000010872611432, guid: aeaff9b5ebec46c43a82150a8dbd1ea0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -159,7 +159,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 573115188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.010738373, y: 5.034238, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -387,7 +387,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 810650160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0114004575, y: 4.7120957, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -485,7 +485,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010877636168, guid: 2d05a729865771341ae01440407b1031, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4000010877636168, guid: 2d05a729865771341ae01440407b1031, type: 2}
       propertyPath: m_LocalPosition.z
@@ -510,10 +510,6 @@ Prefab:
     - target: {fileID: 4000010877636168, guid: 2d05a729865771341ae01440407b1031, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010877636168, guid: 2d05a729865771341ae01440407b1031, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2d05a729865771341ae01440407b1031, type: 2}
@@ -610,7 +606,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010877636168, guid: 2d05a729865771341ae01440407b1031, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4000010877636168, guid: 2d05a729865771341ae01440407b1031, type: 2}
       propertyPath: m_LocalPosition.z
