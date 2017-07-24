@@ -22,16 +22,23 @@ public class PlayerScripts : MonoBehaviour {
 	void Update () {
         if (Input.GetKey(KeyCode.D))
             move(moveSpeed);
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            myRigidbody.velocity = new Vector3(0, myRigidbody.velocity.y,0);
+        }
         if (Input.GetKey(KeyCode.A))
             move(-moveSpeed);
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            myRigidbody.velocity = new Vector3(0, myRigidbody.velocity.y, 0);
+        }
         if (Input.GetKeyDown(KeyCode.W))
             jump(jumpHeight);
 
     }
 
 	void move (float speed) {
-       myRigidbody.velocity = transform.right * speed + new Vector3(0,myRigidbody.velocity.y,0);
-       // myRigidbody.velocity = new Vector3(speed*transform.right.x, myRigidbody.velocity.y, 0);
+        myRigidbody.velocity = transform.right * speed + new Vector3 (0,myRigidbody.velocity.y,0);
     }
 
     void jump(float height)
