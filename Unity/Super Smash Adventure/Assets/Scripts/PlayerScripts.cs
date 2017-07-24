@@ -30,14 +30,15 @@ public class PlayerScripts : MonoBehaviour {
     }
 
 	void move (float speed) {
-        myRigidbody.velocity = transform.right * speed;
+       myRigidbody.velocity = transform.right * speed + new Vector3(0,myRigidbody.velocity.y,0);
+       // myRigidbody.velocity = new Vector3(speed*transform.right.x, myRigidbody.velocity.y, 0);
     }
 
     void jump(float height)
     {
         if (Physics.Raycast(transform.position, Vector3.down, jumpsensitivity, 1 << 8))
         {
-            myRigidbody.velocity = transform.up * height;
+            myRigidbody.velocity = transform.up * height * 2;
         }
     }
 	/*void FixedUpdate () {
