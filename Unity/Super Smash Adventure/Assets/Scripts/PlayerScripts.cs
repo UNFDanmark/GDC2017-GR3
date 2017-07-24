@@ -22,22 +22,30 @@ public class PlayerScripts : MonoBehaviour {
 	void Update () {
         if (Input.GetKey(KeyCode.D))
             move(moveSpeed);
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            myRigidbody.velocity = new Vector3(0, myRigidbody.velocity.y,0);
+        }
         if (Input.GetKey(KeyCode.A))
             move(-moveSpeed);
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            myRigidbody.velocity = new Vector3(0, myRigidbody.velocity.y, 0);
+        }
         if (Input.GetKeyDown(KeyCode.W))
             jump(jumpHeight);
 
     }
 
 	void move (float speed) {
-        myRigidbody.velocity = transform.right * speed;
+        myRigidbody.velocity = transform.right * speed + new Vector3 (0,myRigidbody.velocity.y,0);
     }
 
     void jump(float height)
     {
         if (Physics.Raycast(transform.position, Vector3.down, jumpsensitivity, 1 << 8))
         {
-            myRigidbody.velocity = transform.up * height;
+            myRigidbody.velocity = transform.up * height * 2;
         }
     }
 	/*void FixedUpdate () {
