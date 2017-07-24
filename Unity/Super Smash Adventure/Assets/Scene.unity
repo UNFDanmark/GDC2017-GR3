@@ -265,8 +265,8 @@ GameObject:
   - 33: {fileID: 772316272}
   - 65: {fileID: 772316271}
   - 23: {fileID: 772316270}
-  - 114: {fileID: 772316274}
   - 54: {fileID: 772316275}
+  - 114: {fileID: 772316274}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
