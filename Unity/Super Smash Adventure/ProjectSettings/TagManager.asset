@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - New Tag
+  - DeathZone
   layers:
   - Default
   - TransparentFX
