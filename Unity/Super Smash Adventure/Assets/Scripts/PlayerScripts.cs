@@ -9,9 +9,13 @@ public class PlayerScripts : MonoBehaviour {
 	public float moveSpeed = 10f;
 	public float jumpHeight = 20;
 	public Rigidbody myRigidbody;
-    public float rayLength = 1f;
+    public float rayLength = 0.6f;
     public float levelWidth = 15;
-    public int lives = 3;
+    public int lives = 5;
+    public GameObject life;
+    public float lifeOffset = 0.5f;
+
+    public static string winningPlayer = "";
 
     public float pushbackDistance = 5f;
     public float pushForce = 30;
@@ -19,6 +23,7 @@ public class PlayerScripts : MonoBehaviour {
     public float timeSincePushed;
     public float pushLock = 0.2f;
     public float pushTime = 0.2f;
+
     public AudioScript audioScript;
 
     public bool isPlayerTwo = false;
@@ -34,7 +39,7 @@ public class PlayerScripts : MonoBehaviour {
              
     // Use this for initialization
     void Start(){
-        
+       // drawLives();
     }
 
     // Upd8 15 c8113d 0nc3 p3r fr8me3
@@ -44,7 +49,7 @@ public class PlayerScripts : MonoBehaviour {
         {
             pushed = false;
         }
-
+        
 
 
         //Wall-teleport
@@ -62,7 +67,18 @@ public class PlayerScripts : MonoBehaviour {
         {
             Pushback();
         }
+
+       
     }
+
+    /*void drawLives()
+    {
+        for (int i = 0; i < lives; i++)
+        {
+            Instantiate(life, new Vector3(life.transform.position.x + lifeOffset*i, 14, 0), Quaternion.identity, transform);
+
+        }
+    }*/
     void Pushback()
     {
         if (Vector3.Distance(transform.position, otherPlayer.transform.position) < pushbackDistance && Time.time>timeSincePushed+pushTime)
@@ -110,23 +126,20 @@ public class PlayerScripts : MonoBehaviour {
                 print(gameObject + "lives: " + lives);
             } else
             {
+                if(gameObject.name == "Player1")
+                {
+                    winningPlayer = "Robot";
+                }
+                else if (gameObject.name == "Player2")
+                {
+                    winningPlayer = "Wizard";
+                }
                 SceneManager.LoadScene("GameOver");
             }
-
-
-
-            //Death();
         }
     }
     
-   /*void Death() { 
-       if(lives != 0) {
-             print("Loose life");
-        }
-       else{}
-            
-        
-    }*/ 
+   
 
     public void BeingPushed()
     {

@@ -6,7 +6,7 @@ public class ButtonScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        print("btnScript loaded");
 	}
 	
 	// Update is called once per frame
@@ -16,6 +16,7 @@ public class ButtonScript : MonoBehaviour {
 
     public void changeScene()
     {
+        print("changeScene");
         SceneManager.LoadScene("Multiplayer");
     }
 }
