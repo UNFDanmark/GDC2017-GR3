@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000013331495572}
   - 33: {fileID: 33000012064123146}
   - 23: {fileID: 23000010487381674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SKY_FBX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011915633404}
   - 65: {fileID: 65000013274947584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014065774536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.655249, y: 15.0743885, z: -8.237955}
+  m_LocalPosition: {x: -9.655249, y: 3.16, z: -1.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010217440204}
   m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 2.95, y: -1, z: 14.24}
+  m_LocalPosition: {x: 2.95, y: -1, z: 5.24}
   m_LocalScale: {x: 2.689878, y: 2.689876, z: 2.689876}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
   m_Children: []
@@ -117,5 +117,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 1, z: 1}
+  m_Size: {x: 7.6, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
