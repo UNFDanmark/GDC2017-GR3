@@ -32,6 +32,9 @@ public class PlayerScripts : MonoBehaviour {
     public string horizontalAxis;
     public string verticalAxis;
 
+    public GameObject model;
+    public Vector3 standardRotation;
+
     void awake() {
 		myRigidbody = GetComponent<Rigidbody> ();
         timeSincePushed = -pushTime;
@@ -58,7 +61,7 @@ public class PlayerScripts : MonoBehaviour {
         else if (transform.position.x < -levelWidth)
             transform.position = new Vector3(levelWidth, myRigidbody.position.y, 0);
 
-        if (Input.GetKeyDown(KeyCode.E) && isPlayerTwo == false)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && isPlayerTwo == false)
         {
             Pushback();
         }
@@ -95,7 +98,20 @@ public class PlayerScripts : MonoBehaviour {
         if (!pushed)
         {
             Move(moveSpeed * Input.GetAxis(horizontalAxis));
-            if (Input.GetAxis(verticalAxis) == 1) Jump();
+
+            if (Input.GetAxis(horizontalAxis) == -1)
+            {
+                model.transform.rotation = Quaternion.Euler(standardRotation + new Vector3(0, 180, 0));
+            }
+            else if (Input.GetAxis(horizontalAxis) == 1)
+            {
+                model.transform.rotation = Quaternion.Euler(standardRotation);
+            }
+
+            if (Input.GetAxis(verticalAxis) == 1)
+            {
+                Jump();
+            }
         }
     }
 
@@ -115,10 +131,11 @@ public class PlayerScripts : MonoBehaviour {
         //Access to DeathZone
     }
     void OnTriggerEnter(Collider collider) {
-        audioScript.FallingSound();
+        
 
         if (collider.tag == "DeathZone")
         {
+            audioScript.FallingSound();
             if (lives > 1)
             {
                 gameObject.transform.position = new Vector3(0, 20, 0);
