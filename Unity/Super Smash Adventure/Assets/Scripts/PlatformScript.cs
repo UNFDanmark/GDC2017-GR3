@@ -8,27 +8,28 @@ public class PlatformScript : MonoBehaviour {
     public GameObject[] patternPrefabs2;
     public float patternOffset = 30f;
     public float countDown = 3;
+    public int patternCount = 0;
 
 	// Use this for initialization
 	void Start () {
         Instantiate(patternPrefabs1[0], new Vector3(0, 0, 0), Quaternion.identity, transform);
 
-        if (Time.timeSinceLevelLoad < 80)
-        {
-            for (int i = 1; i < 6; i++)
+       // if (Time.timeSinceLevelLoad < 60)
+       
+        
+            for (int i = 1; i < 56; i++)
             {
-                int rand = Random.Range(0, patternPrefabs1.Length);
-                Instantiate(patternPrefabs1[i], new Vector3(0, patternOffset * i, 0), Quaternion.identity, transform);
-            }
-        }
-        else
-        {
-            for (int i = 1; i < 50; i++)
-            {
+                if (i < 4)
+                {
+                    int rand = Random.Range(0, patternPrefabs1.Length);
+                    Instantiate(patternPrefabs1[rand], new Vector3(0, patternOffset * i, 0), Quaternion.identity, transform);
+                    patternCount++;
+                }
+            else {
                 int rand = Random.Range(0, patternPrefabs2.Length);
-                Instantiate(patternPrefabs2[i], new Vector3(0, patternOffset * i, 0), Quaternion.identity, transform);
-            }
-        }
+                Instantiate(patternPrefabs2[rand], new Vector3(0, patternOffset * i, 0), Quaternion.identity, transform);
+            }         
+       }            
     }
 	
 	// Update is called once per frame
