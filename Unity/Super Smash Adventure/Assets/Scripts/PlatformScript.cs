@@ -15,14 +15,13 @@ public class PlatformScript : MonoBehaviour {
 	    for( int i=1; i < 100; i++)
         {
             int rand = Random.Range(0, patternPrefabs.Length);
-            print(rand);
             Instantiate(patternPrefabs[rand], new Vector3(0, patternOffset*i, 0), Quaternion.identity, transform);
         }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-       
+          if(Time.time > countDown)
             transform.position = new Vector3(transform.position.x, transform.position.y - fallSpeed * Time.deltaTime, 0);
        
 	}
