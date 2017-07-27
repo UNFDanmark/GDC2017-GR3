@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000013331495572}
   - 33: {fileID: 33000012064123146}
   - 23: {fileID: 23000010487381674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SKY_FBX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011915633404}
   - 65: {fileID: 65000013274947584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
