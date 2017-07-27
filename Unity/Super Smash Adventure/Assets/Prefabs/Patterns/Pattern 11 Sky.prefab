@@ -147,7 +147,7 @@ GameObject:
   - 4: {fileID: 4000012895019996}
   - 33: {fileID: 33000013922195014}
   - 23: {fileID: 23000013734276828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SKY_FBX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - 4: {fileID: 4000010875867538}
   - 33: {fileID: 33000011238742494}
   - 23: {fileID: 23000013418630194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SKY_FBX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   - 4: {fileID: 4000011497300748}
   - 33: {fileID: 33000013730221534}
   - 23: {fileID: 23000013881168118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SKY_FBX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011194050222}
   - 65: {fileID: 65000011607045678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012629409860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012524296108}
   - 65: {fileID: 65000013585345318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sky (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011216278814}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011670345212}
   - 65: {fileID: 65000011532494926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
