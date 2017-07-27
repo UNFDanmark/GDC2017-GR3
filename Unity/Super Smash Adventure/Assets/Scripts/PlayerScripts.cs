@@ -9,9 +9,11 @@ public class PlayerScripts : MonoBehaviour {
 	public float moveSpeed = 10f;
 	public float jumpHeight = 20;
 	public Rigidbody myRigidbody;
-    public float rayLength = 1f;
+    public float rayLength = 0.6f;
     public float levelWidth = 15;
     public int lives = 3;
+
+    public static string winningPlayer = "";
 
     public float pushbackDistance = 5f;
     public float pushForce = 30;
@@ -107,6 +109,14 @@ public class PlayerScripts : MonoBehaviour {
                 print(gameObject + "lives: " + lives);
             } else
             {
+                if(gameObject.name == "Player1")
+                {
+                    winningPlayer = "Robot";
+                }
+                else if (gameObject.name == "Player2")
+                {
+                    winningPlayer = "Wizard";
+                }
                 SceneManager.LoadScene("GameOver");
             }
         }
