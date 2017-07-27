@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverScript : MonoBehaviour {
 
+    public Text winningPlayer;
 	// Use this for initialization
 	void Start () {
-	
+        winningPlayer.text = PlayerScripts.winningPlayer + " wins!";
 	}
 	
 	// Update is called once per frame
@@ -21,6 +23,6 @@ public class GameOverScript : MonoBehaviour {
 
     public void mainMenu()
     {
-        SceneManager.LoadScene("TitleScreen");
+        SceneManager.LoadScene("Title Screen");
     }
 }

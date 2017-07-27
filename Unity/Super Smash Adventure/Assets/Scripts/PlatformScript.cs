@@ -21,7 +21,7 @@ public class PlatformScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-          if(Time.time > countDown)
+          if(Time.timeSinceLevelLoad > countDown)
             transform.position = new Vector3(transform.position.x, transform.position.y - fallSpeed * Time.deltaTime, 0);
        
 	}
