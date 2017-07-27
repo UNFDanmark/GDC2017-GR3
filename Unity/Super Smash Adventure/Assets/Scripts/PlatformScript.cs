@@ -4,13 +4,15 @@ using System.Collections;
 public class PlatformScript : MonoBehaviour {
 
     public float fallSpeed = 0.5f;
-    public bool falling = false;
     public GameObject[] patternPrefabs;
-    public float patternOffset = 14.25f;
+    public float patternOffset = 30f;
+    public float countDown = 3;
 
 	// Use this for initialization
 	void Start () {
-	    for( int i=0; i < 100; i++)
+        Instantiate(patternPrefabs[0], new Vector3(0, 0, 0), Quaternion.identity, transform);
+        
+	    for( int i=1; i < 100; i++)
         {
             int rand = Random.Range(0, patternPrefabs.Length);
             print(rand);
@@ -20,9 +22,8 @@ public class PlatformScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (falling)
-        {
+       
             transform.position = new Vector3(transform.position.x, transform.position.y - fallSpeed * Time.deltaTime, 0);
-        }
+       
 	}
 }

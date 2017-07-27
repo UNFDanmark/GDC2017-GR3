@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014045330538}
   - 65: {fileID: 65000011677672918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "Tr\xE6stamme"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - 33: {fileID: 33000013675865418}
   - 23: {fileID: 23000012765568884}
   - 95: {fileID: 95000012360861662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "Tr\xE6stamme_FBX"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

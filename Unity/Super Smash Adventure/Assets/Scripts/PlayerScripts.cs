@@ -119,45 +119,7 @@ public class PlayerScripts : MonoBehaviour {
 
 
 
-    void Motion1()
-    {
-        if (!isPlayerTwo)
-        {
-            // Player 1
-
-            //if (Input.GetKey(KeyCode.A))
-               // move(-moveSpeed);
-
-            /*if (Input.GetKeyUp(KeyCode.D))
-                myRigidbody.velocity = new Vector3(0, myRigidbody.velocity.y, 0);
-            if (Input.GetKeyUp(KeyCode.A))
-                myRigidbody.velocity = new Vector3(0, myRigidbody.velocity.y, 0);
-
-            if (Input.GetKeyDown(KeyCode.W))
-                jump(jumpHeight);
-
-            if (Input.GetKeyDown(KeyCode.Tab))
-                push();*/
-        }
-        else
-        {
-            /* Player 2
-            if (Input.GetKey(KeyCode.RightArrow))
-                move(moveSpeed);
-            if (Input.GetKey(KeyCode.LeftArrow))
-                move(-moveSpeed);
-
-            if (Input.GetKeyUp(KeyCode.RightArrow))
-                myRigidbody.velocity = new Vector3(0, myRigidbody.velocity.y, 0);
-            if (Input.GetKeyUp(KeyCode.LeftArrow))
-                myRigidbody.velocity = new Vector3(0, myRigidbody.velocity.y, 0);
-
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-                jump(jumpHeight);*/
-        }
-
-        //move(Input.GetAxis(horizontalAxis));
-    }
+   
     
    /* void push()
     {
