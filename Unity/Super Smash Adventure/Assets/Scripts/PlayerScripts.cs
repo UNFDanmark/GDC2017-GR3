@@ -23,8 +23,8 @@ public class PlayerScripts : MonoBehaviour {
     public float timeSincePushed;
     public float pushLock = 0.2f;
     public float pushTime = 0.2f;
-   
-    
+
+    public AudioScript audioScript;
 
     public bool isPlayerTwo = false;
     public bool pushed = false;
@@ -87,6 +87,7 @@ public class PlayerScripts : MonoBehaviour {
             print("Push ");
             otherPlayer.GetComponent<PlayerScripts>().BeingPushed();
             otherPlayer.GetComponent<Rigidbody>().AddForce(Vector3.Normalize(otherPlayer.transform.position - gameObject.transform.position)*pushForce,ForceMode.Impulse);
+            audioScript.HitSound();
         }
     }
     void FixedUpdate()
@@ -109,10 +110,13 @@ public class PlayerScripts : MonoBehaviour {
          Physics.Raycast(transform.position + new Vector3(0.5f, 0, 0), Vector3.down, rayLength, 1 << 8))
         {
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpHeight);
+            audioScript.JumpSound();
         }
         //Access to DeathZone
     }
     void OnTriggerEnter(Collider collider) {
+        audioScript.FallingSound();
+
         if (collider.tag == "DeathZone")
         {
             if (lives > 1)
