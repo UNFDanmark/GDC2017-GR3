@@ -14,7 +14,7 @@ public class PlayerScripts : MonoBehaviour {
     public int lives = 3;
 
     public float pushbackDistance = 5f;
-    public float pushForce = 2;
+    public float pushForce = 30;
     public float timeSinceBeingPush;
     public float timeSincePushed;
     public float pushLock = 0.2f;

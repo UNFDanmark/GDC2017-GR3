@@ -524,15 +524,15 @@ MonoBehaviour:
   myRigidbody: {fileID: 772316275}
   rayLength: 1
   levelWidth: 15
-  lives: 2
-  pushbackDistance: 5
-  pushForce: 40
+  lives: 3
+  pushbackDistance: 4
+  pushForce: 30
   timeSinceBeingPush: 0
   timeSincePushed: 0
-  pushLock: 0.1
+  pushLock: 0.2
   pushTime: 0.2
   isPlayerTwo: 0
-  pushed: 1
+  pushed: 0
   horizontalAxis: HorizontalP1
   verticalAxis: VerticalP1
 --- !u!54 &772316275
@@ -759,8 +759,6 @@ MonoBehaviour:
   patternPrefabs:
   - {fileID: 1000010363933942, guid: 852c074ac532efb4f91135c8c22674bc, type: 2}
   - {fileID: 1000013209551586, guid: 5dffc7f0ff7597e45bb07c654fd0a86c, type: 2}
-  - {fileID: 1000012728765064, guid: e97942003a131534c8723f7510187972, type: 2}
-  - {fileID: 1000010473380376, guid: dbeb3fa3c70dab4438dc8dbb4baf04af, type: 2}
   patternOffset: 30
   countDown: 3
 --- !u!4 &843727567 stripped
@@ -952,13 +950,13 @@ MonoBehaviour:
   myRigidbody: {fileID: 1293820912}
   rayLength: 1
   levelWidth: 15
-  lives: 2
-  pushbackDistance: 5
-  pushForce: 40
+  lives: 3
+  pushbackDistance: 4
+  pushForce: 30
   timeSinceBeingPush: 0
   timeSincePushed: 0
-  pushLock: 0.1
-  pushTime: 0.2
+  pushLock: 0.2
+  pushTime: 0.1
   isPlayerTwo: 1
   pushed: 0
   horizontalAxis: HorizontalP2
