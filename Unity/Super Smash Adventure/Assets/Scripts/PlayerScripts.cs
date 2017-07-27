@@ -20,6 +20,7 @@ public class PlayerScripts : MonoBehaviour {
     public float pushLock = 0.2f;
     public float pushTime = 0.2f;
    
+    
 
     public bool isPlayerTwo = false;
     public bool pushed = false;
@@ -44,7 +45,7 @@ public class PlayerScripts : MonoBehaviour {
         {
             pushed = false;
         }
-
+        
 
 
         //Wall-teleport
@@ -108,21 +109,10 @@ public class PlayerScripts : MonoBehaviour {
             {
                 SceneManager.LoadScene("GameOver");
             }
-
-
-
-            //Death();
         }
     }
     
-   /*void Death() { 
-       if(lives != 0) {
-             print("Loose life");
-        }
-       else{}
-            
-        
-    }*/ 
+   
 
     public void BeingPushed()
     {

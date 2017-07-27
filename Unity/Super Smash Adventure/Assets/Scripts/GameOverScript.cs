@@ -2,11 +2,11 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class ButtonScript : MonoBehaviour {
+public class GameOverScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        print("btnScript loaded");
+	
 	}
 	
 	// Update is called once per frame
@@ -14,9 +14,13 @@ public class ButtonScript : MonoBehaviour {
 	
 	}
 
-    public void changeScene()
+    public void retry()
     {
-        print("changeScene");
-        SceneManager.LoadScene("Multiplayer");
+        SceneManager.LoadScene("MultiPlayer");
+    }
+
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("TitleScreen");
     }
 }
