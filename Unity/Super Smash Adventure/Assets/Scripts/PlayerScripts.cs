@@ -11,6 +11,7 @@ public class PlayerScripts : MonoBehaviour {
 	public Rigidbody myRigidbody;
     public float rayLength = 1f;
     public float levelWidth = 15;
+    public int lives = 3;
 
     public float pushbackDistance = 5f;
     public float pushForce = 2;
@@ -98,55 +99,30 @@ public class PlayerScripts : MonoBehaviour {
     void OnTriggerEnter(Collider collider) {
         if (collider.tag == "DeathZone")
         {
-            print("You Lose");
-            Death();
+            if (lives > 1)
+            {
+                gameObject.transform.position = new Vector3(0, 20, 0);
+                lives--;
+                print(gameObject + "lives: " + lives);
+            } else
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+
+
+
+            //Death();
         }
     }
-
-        /* void move (float speed) {
-             myRigidbody.velocity = transform.right * speed + new Vector3 (0,myRigidbody.velocity.y,0);
-         }
-
-         void jump(float height)
-         {
-             if (Physics.Raycast(transform.position-new Vector3 (0.5f,0,0), Vector3.down, rayLength, 1 << 8) || 
-                 Physics.Raycast(transform.position+new Vector3 (0.5f,0,0), Vector3.down, rayLength, 1 << 8))
-             {
-                 myRigidbody.velocity = transform.up * height * 2;
-                 */
     
-
-
-
-
-   
-    
-   /* void push()
-    {
-        //otherPlayer.transform.position;
-        Vector3 dist = otherPlayer.transform.position - transform.position;
-        if (dist.magnitude < 3)
-        {
-            dist.Normalize();
-            otherPlayer.GetComponent<Rigidbody>().AddForce(dist * 20, ForceMode.Impulse);
+   /*void Death() { 
+       if(lives != 0) {
+             print("Loose life");
         }
-    }*/
-   void Death()
-    {
-        if(SceneManager.GetActiveScene().name == "Singleplayer")
-        {
-            print("change scene");
-            SceneManager.LoadScene("GameOver");
-        }
-        else if(SceneManager.GetActiveScene().name == "Multiplayer")
-        {
-            print("Loose life");
-            /* if(lives != 0) {
-        }
-        else{}
-            */
-        }
-    } 
+       else{}
+            
+        
+    }*/ 
 
     public void BeingPushed()
     {
