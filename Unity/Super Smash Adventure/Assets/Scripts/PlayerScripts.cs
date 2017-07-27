@@ -11,6 +11,7 @@ public class PlayerScripts : MonoBehaviour {
 	public Rigidbody myRigidbody;
     public float rayLength = 1f;
     public float levelWidth = 15;
+
     public float pushbackDistance = 5f;
     public float pushForce = 2;
     public float timeSinceBeingPush;
@@ -87,7 +88,6 @@ public class PlayerScripts : MonoBehaviour {
 
     public void Jump()
     {
-        print("JUMPY (This still relevant?)");
         if (Physics.Raycast(transform.position - new Vector3(0.5f, 0, 0), Vector3.down, rayLength, 1 << 8) ||
          Physics.Raycast(transform.position + new Vector3(0.5f, 0, 0), Vector3.down, rayLength, 1 << 8))
         {
@@ -159,7 +159,7 @@ public class PlayerScripts : MonoBehaviour {
         //move(Input.GetAxis(horizontalAxis));
     }
     
-    void push()
+   /* void push()
     {
         //otherPlayer.transform.position;
         Vector3 dist = otherPlayer.transform.position - transform.position;
@@ -168,7 +168,7 @@ public class PlayerScripts : MonoBehaviour {
             dist.Normalize();
             otherPlayer.GetComponent<Rigidbody>().AddForce(dist * 20, ForceMode.Impulse);
         }
-    }
+    }*/
    void Death()
     {
         if(SceneManager.GetActiveScene().name == "Singleplayer")
@@ -178,7 +178,11 @@ public class PlayerScripts : MonoBehaviour {
         }
         else if(SceneManager.GetActiveScene().name == "Multiplayer")
         {
-            print("Multiplayer Scene");
+            print("Loose life");
+            /* if(lives != 0) {
+        }
+        else{}
+            */
         }
     } 
 

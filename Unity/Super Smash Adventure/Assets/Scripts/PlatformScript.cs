@@ -5,14 +5,16 @@ public class PlatformScript : MonoBehaviour {
 
     public float fallSpeed = 0.5f;
     public bool falling = false;
-    public GameObject patternPrefab;
-    public float patternOffset = 13.85f;
+    public GameObject[] patternPrefabs;
+    public float patternOffset = 14.25f;
 
 	// Use this for initialization
 	void Start () {
-	    for( int i=0; i < 10; i++)
+	    for( int i=0; i < 100; i++)
         {
-            Instantiate(patternPrefab, new Vector3(0, patternOffset*i, 0), Quaternion.identity, transform);
+            int rand = Random.Range(0, patternPrefabs.Length);
+            print(rand);
+            Instantiate(patternPrefabs[rand], new Vector3(0, patternOffset*i, 0), Quaternion.identity, transform);
         }
 	}
 	
