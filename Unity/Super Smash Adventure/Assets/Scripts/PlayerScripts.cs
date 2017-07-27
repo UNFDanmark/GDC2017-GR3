@@ -11,7 +11,9 @@ public class PlayerScripts : MonoBehaviour {
 	public Rigidbody myRigidbody;
     public float rayLength = 0.6f;
     public float levelWidth = 15;
-    public int lives = 3;
+    public int lives = 5;
+    public GameObject life;
+    public float lifeOffset = 0.5f;
 
     public static string winningPlayer = "";
 
@@ -37,7 +39,7 @@ public class PlayerScripts : MonoBehaviour {
              
     // Use this for initialization
     void Start(){
-        
+       // drawLives();
     }
 
     // Upd8 15 c8113d 0nc3 p3r fr8me3
@@ -65,7 +67,18 @@ public class PlayerScripts : MonoBehaviour {
         {
             Pushback();
         }
+
+       
     }
+
+    /*void drawLives()
+    {
+        for (int i = 0; i < lives; i++)
+        {
+            Instantiate(life, new Vector3(life.transform.position.x + lifeOffset*i, 14, 0), Quaternion.identity, transform);
+
+        }
+    }*/
     void Pushback()
     {
         if (Vector3.Distance(transform.position, otherPlayer.transform.position) < pushbackDistance && Time.time>timeSincePushed+pushTime)
