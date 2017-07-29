@@ -128,8 +128,8 @@ public class PlayerScripts : MonoBehaviour {
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpHeight);
             audioScript.JumpSound();
         }
-        //Access to DeathZone
     }
+    //Access to DeathZone
     void OnTriggerEnter(Collider collider) {
         
 
